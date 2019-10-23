@@ -1,0 +1,104 @@
+@import '../../../modules/mediaQuery/app'
+
+.main-profile
+    background: white
+    height: 75vh 
+    overflow: auto
+
+.profile-data
+    background: white
+    padding: 10px
+
+.profile-data hr
+    height: 2px
+    width: 70%
+    background-image: linear-gradient(to right,transparent, teal, transparent)
+    margin-bottom: 5vh
+    border-style: none   
+
+.isi-data
+    display: flex
+    justify-content: space-around
+    width: 70%
+    margin: 5px auto
+
+.isi-data div:nth-child(1)
+    text-align: left
+    font-size: 17px
+    flex-grow: 1
+    font-weight: 600
+    max-width: 50%
+
+.isi-data div:nth-child(1) i
+    width: 5%
+    margin-right: 15px
+
+.isi-data div:nth-child(2)
+    display: block
+    font-size: 17px
+    flex-grow: 1
+    text-align: right
+    max-width: 50%
+    font-weight: 700
+
+// ------  
+
+.education-data
+    display: flex
+    justify-content: space-around
+    width: 70%
+    margin: 5px auto
+
+.education-data div:nth-child(1)
+    text-align: left
+    font-size: 17px
+    flex-grow: 1
+    font-weight: 600
+    max-width: 20%
+
+.education-data div:nth-child(1)
+    width: 5%
+    margin-right: 15px
+
+.education-data div:nth-child(2)
+    display: block
+    flex-grow: 1
+    text-align: left
+    max-width: 80%
+
+@media screen and (max-width: $laptop)
+    .profile-data hr
+        width: 100%  
+    
+    .isi-data
+        width: 90%
+
+    .isi-data div:nth-child(1)
+        font-size: 12px
+
+    .isi-data div:nth-child(2)
+        font-size: 12px
+
+    .education-data
+        width: 90%
+
+    .education-data div:nth-child(1)
+        font-size: 16px
+
+    .education-data div:nth-child(2)
+        font-size: 16px
+
+    .education-data div:nth-child(1)
+        font-size: 12px
+
+    .education-data div:nth-child(2)
+        font-size: 12px
+
+    .education-data div:nth-child(1) h5
+        font-size: 12px
+
+    .education-data div:nth-child(2) h5
+        font-size: 12px
+    
+    .main-profile
+        height: 100%

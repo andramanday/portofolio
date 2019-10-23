@@ -1,0 +1,190 @@
+@import '../../modules/mediaQuery/app'
+@import url('//fonts.googleapis.com/css?family=Nunito:400,600,700,800')
+
+//create by Andra Manday
+//htpp://www.antarra.tech
+
+body
+  background-color: #f4f6f9
+  font-size: 14px
+  font-weight: 400
+  font-family: "Nunito", "Segoe UI", arial
+  color: #6c757d
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 700
+
+.indent
+    text-indent: 5%
+// Penjelasan :
+// Main wrapper yaitu component paling dasar yang kita gunakan
+// kita ambil ukuran berdasarkan layar browser atau sebagai parent,
+// -> dengan satauan viewport (vh / vw) dan diberikan jarak luar(Margin)
+// menentukan tinggi dengan (vh) viewport link https://www.codepolitan.com/
+.main-wrapper
+    height: 84vh
+    margin: 8vh
+    overflow: hidden
+    border-radius: 5px
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+
+// wrapper kita jadikan display flex yang berfungi untuk membuat element yang 
+// -> nanti didalamnya menjadi sejajar
+.wrapper
+    display: flex
+
+.sisi-kiri
+    //lebar flex
+    flex-grow:1
+    //tinggi 100% mengikuti parent
+    height: 100vh
+    max-width: 30%
+    background: black
+
+.profile-photo
+    background-size: 100%
+    height: 100vh
+    overflow: hidden
+    position: relative
+
+.profile-identitas
+    top: 60vh
+    right: 0
+    Margin: 2vh
+    position: absolute
+    color: #fff
+    text-align: right
+    width: 100%
+
+.profile-identitas hr
+    margin:0
+    background-image: linear-gradient(to right, transparent, white)
+    height: 1px
+
+.profile-medsos
+    bottom: 16vh
+    right: 0
+    position: absolute
+    color: #fff
+    text-align: right
+    width: 100%
+
+.navmedsos
+    display: block
+    background-color: rgba(0, 0, 0, 0.2)
+
+.navmedsos ul
+    display: flex
+    height: 8vh
+    margin: 0
+    padding: 0
+
+.navmedsos ul li
+    cursor: pointer
+    color: #6f6f6f
+    flex-grow: 1
+    font-size: 17px
+    list-style-type: none
+    padding: 2vh 2%
+    text-align: center
+    text-transform: uppercase
+
+.navmedsos ul li a
+    color: white
+    font-size: 20px
+
+.navmedsos ul li a:hover
+    font-size: 22px
+
+nav
+    display: block
+    background: #fafafa
+    position: sticky
+    border-color: white
+    color: white
+    top:0
+
+nav ul
+    display: flex
+    height: 8vh
+    margin: 0
+    padding: 0
+
+nav ul a.active
+    background: white
+    font-weight: 800
+
+
+nav ul a
+    cursor: pointer
+    color: #6f6f6f
+    flex-grow: 1
+    font-size: 17px
+    list-style-type: none
+    padding: 2vh 2%
+    text-align: center
+    text-transform: uppercase
+
+nav ul a i
+    visibility: hidden
+    display: none
+    
+nav ul a span
+    visibility: visible
+
+
+.sisi-kanan
+    flex-grow:3
+    height: 100vh
+    max-width: 70%
+    position: relative  
+    background: white   
+    overflow: hidden
+
+@media screen and (max-width: $mobileL)
+    .main-wrapper
+        overflow: visible
+        margin: 0
+        padding: 10px
+        height: auto
+        border-radius: 5px
+
+    .profile-photo
+        height: 230px
+
+    .profile-identitas
+        top: 0
+    
+    .profile-medsos
+        bottom:0
+            
+    nav ul a i
+        visibility: visible
+        display: block
+
+    nav ul a span
+        visibility: hidden
+        display: none
+
+@media screen and (max-width: $tablet)
+    .main-wrapper 
+        overflow: visible
+        height: auto
+
+    .wrapper 
+        flex-wrap: wrap
+
+    .sisi-kiri 
+        max-width: none
+        width: 80%
+        height: auto
+
+    .sisi-kanan 
+        max-width: none
+        overflow: auto
+
+    nav ul
+        height: auto
+
+    nav ul a
+        font-size: 12px
