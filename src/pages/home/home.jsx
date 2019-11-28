@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../stylesheets/home.sass'
 
-class Home extends Component{
+class home extends Component{
     // eslint-disable-next-line no-useless-constructor
     constructor(props) {
         super(props);
@@ -26,4 +26,4 @@ class Home extends Component{
     }
 }
 
-export default  Home;
+export default  home;
