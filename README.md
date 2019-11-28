@@ -9,3 +9,8 @@ repository
 View Website http://andra.antarra.tech
 
 Enjoy..
+
+
+clone this
+
+yarn start

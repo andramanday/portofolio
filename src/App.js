@@ -1,16 +1,15 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
-// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import '../node_modules/bootstrap/dist/css/bootstrap.css';
-// import './assets/css/style.css';
-// import Home from './pages/home/Home';
-import MainWrapper from './pages/MainWrapper';
+import Main from './pages/Main';
+import {Provider} from 'react-redux'
+import store from './redux/store'
 
 function App() {
-    return (
-        <MainWrapper/>
-    )
+  return (
+    <Provider store={store}>
+    <Main/>
+    </Provider>
+  );
 }
 
-export default App;
+export default (App);

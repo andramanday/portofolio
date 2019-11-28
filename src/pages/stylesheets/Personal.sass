@@ -1,0 +1,37 @@
+@import './app'
+
+.personal-title h1
+    margin: 0
+
+.personal-content
+    display: flex
+    margin-top: 2vh
+    font-size: 18px
+
+.label
+    flex-shrink: 1
+    width: 50%
+    text-align: right
+    padding-right: 3%
+    font-weight: 700
+
+.label i
+    padding-right: 10px
+
+.data
+    flex-shrink: 1
+    width: 50%
+    padding-left: 3%
+
+@media screen and (max-width: $tablet)
+    .personal-content
+        font-size: 0.9em
+
+    .label
+        width: 40%
+        text-align: right
+        padding-right: 1%
+        font-weight: 700
+
+    .data
+        width: 60%
