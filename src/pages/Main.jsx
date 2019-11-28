@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './stylesheets/Style.sass'
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import { BrowserRouter as Router, Route, NavLink, Redirect } from "react-router-dom";
 import { AnimatedSwitch } from 'react-router-transition';
 import { registerNav } from '../modules/Navigation'
@@ -38,7 +39,7 @@ class Main extends Component{
                             <Route path="/personal" component={ ContainerPersonal } />
                             <Route path="/experience" component={ ContainerExperience } />
                             <Route path="/project" component={ ContainerProject } />
-                            <Route key="projectSelected" path="/project-selected" component={projectSelected} />,
+                            <Route key="projectSelected" path="/project-selected" component={projectSelected} />
                             <Redirect to="/" />
                         </AnimatedSwitch>
                     </div>

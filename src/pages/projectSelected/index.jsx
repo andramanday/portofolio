@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../stylesheets/Portofolio.sass';
 import serverCall from '../../config/serverCall'
+import Loader from 'react-loader-spinner'
 
 
 class projectSelected extends Component{
@@ -8,7 +9,7 @@ class projectSelected extends Component{
         super(props);
 
         this.state = {
-            product : [],
+            product :'',
             loading: true
         }
     }
@@ -23,7 +24,7 @@ class projectSelected extends Component{
             console.log(this.state.product)
         })
         .catch(error=>{
-            alert(error);
+            console.log(error);
         })
     }
     
@@ -39,7 +40,15 @@ class projectSelected extends Component{
                     <div className="portofolio-content">
                         
                         {/* {this.props.location.pathname.split("/").slice(-1)[0]} */}
-
+                        {this.state.loading &&
+                            <Loader
+                            type="Puff"
+                            color="#00BFFF"
+                            height={100}
+                            width={100}
+                            />
+                        }
+                        {this.state.product && 
                         <div className="image-kiri">
                             <img src={`http://api.antarra.tech/${imgurl}`} alt="img1" width="100%"/>
                             <div className="cont-desc">
@@ -52,6 +61,7 @@ class projectSelected extends Component{
                                 <a href="/">GitHub</a>
                             </div>
                         </div>
+                        }
                     </div>
             </div>
         )
